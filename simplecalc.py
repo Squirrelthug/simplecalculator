@@ -58,34 +58,3 @@ def main():
 
 
 main()
-
-
-def main():
-    while True:
-        num1_input = input("Enter the first number or 'q' to quit: ")
-        if num1_input.lower() == 'q':
-            break
-
-        num2_input = input("Enter the second number or 'q' to quit: ")
-        if num2_input.lower() == 'q':
-            break
-
-        operation = input("Enter the operation (+, -, *, /) or 'q' to quit: ")
-        if operation.lower() == 'q':
-            break
-
-        try:
-            num1 = float(num1_input)
-            num2 = float(num2_input)
-        except ValueError:
-            print("Invalid input. Please enter a number.")
-            continue
-
-# calling the calculator function defined earlier
-        result = calculator(num1, num2, operation)
-
-        if result is not None:
-            print("The result is: ", result)
-
-
-main()
